@@ -1,10 +1,13 @@
 //You can edit ALL of the code here
-const allEpisodes = getAllEpisodes();
+let allEpisodes;
 
 
-function setup() {
+async function setup() {
+    allEpisodes = await fetchAllEpisodes();
     render(allEpisodes);
-    createDropDown(allEpisodes);
+    createEpisodeDropdown(allEpisodes);
+    input.addEventListener("input", searchEpisodes);
+    fetchAllEpisodes();
 }
 
 function makePageForEpisodes(episodeList) {
@@ -114,7 +117,17 @@ function liveSearch() {
         render(searchResult);
     }
 }
-
+/*
+ * Role - To fetch episodes using the Fetch API
+ * Parameter - None
+ * Returns - An array of episodes (i.e. an array objects).
+ */
+async function fetchAllEpisodes() {
+    let promise = await fetch("https://api.tvmaze.com/shows/82/episodes");
+    let episodes = await promise.json();
+    // console.log(episodes);
+    return episodes;
+}
 
 window.onload = setup;
 liveSearch();
