@@ -29,6 +29,14 @@ body {
     font-weight: 500;
 }
 
+#episodeDropDownList {
+    height: 2rem;
+    margin-bottom: 3%;
+    color: #201a07;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 #root {
     width: 100%;
     display: flex;
