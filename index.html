@@ -18,20 +18,26 @@
     <p id="numOfEpisodes"></p>
 
     <form>
+        <select id="showDropDownList">
+      </select>
+
         <select id="episodeDropDownList">
       </select>
     </form>
-
     <div id="root">
     </div>
-
     <hr>
     <footer>
         All the data for the episodes has been taken from
         <a href="https://www.tvmaze.com/" target="_blank">TVMaze.com</a>
     </footer>
+
+    <!-- Loads a provided function called getAllShows() which returns all shows -->
+    <script src="shows.js"></script>
+
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
+
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
 </body>

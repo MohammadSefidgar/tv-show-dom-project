@@ -20,17 +20,16 @@ body {
 /* The search bar */
 
 .searchBar {
-    width: 30%;
-    margin: 3% auto;
+    width: 40%;
+    margin: 1% auto;
     height: 2rem;
     font-size: 1.2rem;
     color: #181c2b;
-    position: relative;
 }
 
 
 /* The number of episodes displayed, only visible when a search is made.
-  Else it stays as an empty tag */
+    Else it stays as an empty tag */
 
 #numOfEpisodes {
     height: 2rem;
@@ -43,7 +42,8 @@ body {
 
 /* The dropdown list displaying a list of all the episodes */
 
-#episodeDropDownList {
+#episodeDropDownList,
+#showDropDownList {
     height: 2rem;
     margin-bottom: 5%;
     color: #181c2b;
@@ -73,10 +73,21 @@ body {
     color: #ecaf59;
 }
 
+.showBlock {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5%;
+    padding: 1%;
+    background-color: #181c2b;
+    color: #ecaf59;
+}
+
 
 /* Title of the episode */
 
-.episodeTitle {
+.episodeTitle,
+.showTitle {
     width: 94%;
     margin: 0 auto;
     padding: 1%;
@@ -107,7 +118,8 @@ hr {
 
 /* The image of the episode */
 
-.episodeBlock img {
+.episodeBlock img,
+.showBlock img {
     align-self: flex-start;
     width: 90%;
     margin: 0 auto;
@@ -128,7 +140,8 @@ hr {
 
 /* Contains the link to TVMaze page of that very episode */
 
-.episodeLink {
+.episodeLink,
+.showLink {
     color: #fe012f;
     font-style: italic;
 }
